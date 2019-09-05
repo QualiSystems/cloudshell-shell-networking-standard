@@ -1,9 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from cloudshell.shell.standards.autoload_generic_models import GenericResourceModel, GenericChassis, GenericModule, \
-    GenericSubModule, GenericPort, GenericPowerPort, GenericPortChannel
-from cloudshell.shell.standards.core.autoload.resource_model import ResourceAttribute
 import cloudshell.shell.standards.attribute_names as attribute_names
+from cloudshell.shell.standards.autoload_generic_models import (
+    GenericChassis,
+    GenericModule,
+    GenericPort,
+    GenericPortChannel,
+    GenericPowerPort,
+    GenericResourceModel,
+    GenericSubModule,
+)
+from cloudshell.shell.standards.core.autoload.resource_model import ResourceAttribute
 
 __all__ = ['NetworkingResourceModel', 'GenericResourceModel', 'GenericChassis', 'GenericModule', 'GenericSubModule',
            'GenericPortChannel', 'GenericPowerPort', 'GenericPort']
