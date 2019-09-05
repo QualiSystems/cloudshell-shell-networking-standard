@@ -5,7 +5,6 @@ from abc import ABC, abstractmethod
 
 
 class NetworkingResourceDriverInterface(ABC):
-
     @abstractmethod
     def ApplyConnectivityChanges(self, context, request):
         pass
@@ -23,7 +22,9 @@ class NetworkingResourceDriverInterface(ABC):
         pass
 
     @abstractmethod
-    def restore(self, context, path, configuration_type, restore_method, vrf_management_name):
+    def restore(
+        self, context, path, configuration_type, restore_method, vrf_management_name
+    ):
         pass
 
     @abstractmethod
