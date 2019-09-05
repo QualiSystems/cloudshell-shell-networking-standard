@@ -11,6 +11,9 @@ from cloudshell.shell.standards.resource_config_generic_models import (
 )
 
 
-class NetworkingResourceConfig(GenericSnmpConfig, GenericCLIConfig,
-                               GenericConsoleServerConfig, GenericBackupConfig):
-    vrf_management_name = ResourceAttrRO(attribute_names.VRF_MANAGEMENT_NAME, ResourceAttrRO.NAMESPACE.SHELL_NAME)
+class NetworkingResourceConfig(
+    GenericSnmpConfig, GenericCLIConfig, GenericConsoleServerConfig, GenericBackupConfig
+):
+    vrf_management_name = ResourceAttrRO(
+        attribute_names.VRF_MANAGEMENT_NAME, ResourceAttrRO.NAMESPACE.SHELL_NAME
+    )
