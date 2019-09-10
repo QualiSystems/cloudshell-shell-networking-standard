@@ -579,3 +579,5 @@ An example for the "saved_artifact_info" input:
 ```
 
 Notes: The artifact types supported by Networking orchestration_restore command are "ftp", "tftp", "filesystem" and "scp". The "requires_same_resource" restore rule for Networking devices is always True. The "created_date" refers to the creation date of the snapshot.
+
+We use tox and pre-commit for testing. [Services description](https://github.com/QualiSystems/cloudshell-package-repo-template#description-of-services)
