@@ -19,6 +19,9 @@ setup(
     packages=find_packages(),
     install_requires=required,
     tests_require=required_for_tests,
+    python_requires=(
+        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, <4"
+    ),
     test_suite="nose.collector",
     version=version_from_file,
     description="QualiSystems Shells Networking Standard Package",
