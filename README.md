@@ -6,8 +6,8 @@
 
 # Networking Shell Standard
 
-[![Build status](https://travis-ci.org/QualiSystems/cloudshell-shell-networking-standard.svg?branch=dev)](https://travis-ci.org/QualiSystems/cloudshell-shell-networking-standard)
-[![codecov](https://codecov.io/gh/QualiSystems/cloudshell-shell-networking-standard/branch/dev/graph/badge.svg)](https://codecov.io/gh/QualiSystems/cloudshell-shell-networking-standard)
+[![Build status](https://travis-ci.org/QualiSystems/cloudshell-shell-networking-standard.svg?branch=master)](https://travis-ci.org/QualiSystems/cloudshell-shell-networking-standard)
+[![codecov](https://codecov.io/gh/QualiSystems/cloudshell-shell-networking-standard/branch/master/graph/badge.svg)](https://codecov.io/gh/QualiSystems/cloudshell-shell-networking-standard)
 [![PyPI version](https://badge.fury.io/py/cloudshell-shell-networking-standard.svg)](https://badge.fury.io/py/cloudshell-shell-networking-standard)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 
