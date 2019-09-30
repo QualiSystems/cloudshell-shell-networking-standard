@@ -1,11 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from abc import ABC, abstractmethod
+from abc import ABCMeta, abstractmethod
+
+# compatible with Python 2 *and* 3:
+ABC = ABCMeta("ABC", (object,), {"__slots__": ()})
 
 
 class NetworkingResourceDriverInterface(ABC):
-
     @abstractmethod
     def ApplyConnectivityChanges(self, context, request):
         pass
@@ -23,7 +25,9 @@ class NetworkingResourceDriverInterface(ABC):
         pass
 
     @abstractmethod
-    def restore(self, context, path, configuration_type, restore_method, vrf_management_name):
+    def restore(
+        self, context, path, configuration_type, restore_method, vrf_management_name
+    ):
         pass
 
     @abstractmethod
