@@ -1,8 +1,9 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+from __future__ import annotations
 
-import cloudshell.shell.standards.attribute_names as attribute_names
-from cloudshell.shell.standards.core.resource_config_entities import ResourceAttrRO
+from attrs import define
+
+import cloudshell.shell.standards.attribute_names as attr_name
+from cloudshell.shell.standards.core.resource_conf import attr
 from cloudshell.shell.standards.resource_config_generic_models import (
     GenericBackupConfig,
     GenericCLIConfig,
@@ -11,9 +12,8 @@ from cloudshell.shell.standards.resource_config_generic_models import (
 )
 
 
+@define(slots=False, str=False)
 class NetworkingResourceConfig(
     GenericSnmpConfig, GenericCLIConfig, GenericConsoleServerConfig, GenericBackupConfig
 ):
-    vrf_management_name = ResourceAttrRO(
-        attribute_names.VRF_MANAGEMENT_NAME, ResourceAttrRO.NAMESPACE.SHELL_NAME
-    )
+    vrf_management_name: str = attr(attr_name.VRF_MANAGEMENT_NAME)
