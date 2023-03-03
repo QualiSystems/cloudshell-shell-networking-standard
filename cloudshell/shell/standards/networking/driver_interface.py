@@ -1,10 +1,4 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-from abc import ABCMeta, abstractmethod
-
-# compatible with Python 2 *and* 3:
-ABC = ABCMeta("ABC", (object,), {"__slots__": ()})
+from abc import abstractmethod, ABC
 
 
 class NetworkingResourceDriverInterface(ABC):
