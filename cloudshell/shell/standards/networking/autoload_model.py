@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import cloudshell.shell.standards.attribute_names as attribute_names
 from cloudshell.shell.standards.autoload_generic_models import (
     GenericChassis,
@@ -23,12 +21,12 @@ __all__ = [
     "GenericPort",
 ]
 
+from cloudshell.shell.standards.core.namespace_type import NameSpaceType
+
 
 class NetworkingResourceModel(GenericResourceModel):
     SUPPORTED_FAMILY_NAMES = ["CS_Switch", "CS_Router", "CS_WirelessController"]
-    model_name = ResourceAttribute(
-        attribute_names.MODEL_NAME, ResourceAttribute.NAMESPACE.FAMILY_NAME
-    )
+    model_name = ResourceAttribute(attribute_names.MODEL_NAME, NameSpaceType.FAMILY_NAME)
 
     @property
     def entities(self):
