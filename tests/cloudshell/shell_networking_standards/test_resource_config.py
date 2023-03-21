@@ -1,5 +1,5 @@
-import sys
 import unittest
+from unittest.mock import MagicMock
 
 from cloudshell.shell.standards.attribute_names import (
     BACKUP_LOCATION,
@@ -30,11 +30,6 @@ from cloudshell.shell.standards.attribute_names import (
 from cloudshell.shell.standards.networking.resource_config import (
     NetworkingResourceConfig,
 )
-
-if sys.version_info >= (3, 0):
-    from unittest.mock import MagicMock
-else:
-    from mock import MagicMock
 
 
 class TestNetworkingResourceConfig(unittest.TestCase):
@@ -68,7 +63,7 @@ class TestNetworkingResourceConfig(unittest.TestCase):
             CONSOLE_USER: "console user",
         }
         shell_attributes = {
-            "{}.{}".format(shell_name, key): value for key, value in attributes.items()
+            f"{shell_name}.{key}": value for key, value in attributes.items()
         }
 
         config = NetworkingResourceConfig(

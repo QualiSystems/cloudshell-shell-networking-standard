@@ -26,7 +26,7 @@ class TestGenericResourceModel(unittest.TestCase):
         self.assertEqual("", resource.relative_address.__repr__())
         self.assertEqual("GenericResource", resource.resource_model)
         self.assertEqual(
-            "{}.{}".format(shell_name, resource.resource_model),
+            f"{shell_name}.{resource.resource_model}",
             resource.cloudshell_model_name,
         )
 
