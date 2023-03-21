@@ -26,7 +26,9 @@ from cloudshell.shell.standards.core.namespace_type import NameSpaceType
 
 class NetworkingResourceModel(GenericResourceModel):
     SUPPORTED_FAMILY_NAMES = ["CS_Switch", "CS_Router", "CS_WirelessController"]
-    model_name = ResourceAttribute(attribute_names.MODEL_NAME, NameSpaceType.FAMILY_NAME)
+    model_name = ResourceAttribute(
+        attribute_names.MODEL_NAME, NameSpaceType.FAMILY_NAME
+    )
 
     @property
     def entities(self):
